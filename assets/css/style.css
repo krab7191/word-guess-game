@@ -23,3 +23,26 @@ h1 {
     color: white;
     line-height: 95px;
 }
+
+#main-content {
+    /* To push below fixed header */
+    margin-top: 100px;
+    width: 80%;
+    height: 500px;
+    max-width: 960px;
+    border: 8px inset #333;
+}
+
+.body-container {
+    height: 486px;
+}
+
+.body-container img {
+    position: absolute;
+}
+/* Not any document body!! The actual body body */
+
+#body {
+    height: 486px;
+    width: auto;
+}
