@@ -29,7 +29,6 @@ h1 {
     /* To push below fixed header */
     margin-top: 100px;
     width: 80%;
-    height: 500px;
     max-width: 960px;
     border: 8px ridge #333;
     font-family: 'metal', Fallback, serif;
@@ -40,9 +39,8 @@ h1 {
     padding-top: 5px;
     color: #111;
 }
-
 .body-container {
-    height: 486px;
+    height: 100%;
 }
 
 .body-container img {
@@ -56,8 +54,8 @@ h1 {
 /* Not any document body!! The actual body body */
 
 .body-container img {
-    height: 486px;
-    width: auto;
+    /* height: 486px; */
+    /* width: auto; */
 }
 
 #stats-pane, #game-pane {
@@ -79,6 +77,7 @@ h1 {
 #blanks {
     font-size: 4em;
 }
+
 #guessed-letters {
     font-size: 2.5em;
 }
@@ -95,4 +94,17 @@ h1 {
 
 .pad-left-15 {
     padding-left: 15px;
+}
+
+#winloss {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    background: #666;
+    border-radius: 5px;
+    padding: 30px;
+    font-size: 4em;
 }
