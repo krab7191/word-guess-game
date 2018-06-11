@@ -16,7 +16,7 @@ header {
     height: 80px;
     background-color: #333;
     box-shadow: 0 8px 6px -6px black;
-    font-family: 'metal', Fallback, sans-serif;
+    font-family: 'metal', Fallback, serif;
 }
 
 h1 {
@@ -30,7 +30,14 @@ h1 {
     width: 80%;
     height: 500px;
     max-width: 960px;
-    border: 8px inset #333;
+    border: 8px ridge #333;
+    font-family: 'metal', Fallback, serif;
+    font-size: .9em;
+}
+
+#main-content p {
+    padding-top: 10px;
+    color: #111;
 }
 
 .body-container {
@@ -46,10 +53,15 @@ h1 {
 }
 
 /* Not any document body!! The actual body body */
-
 #body {
     height: 486px;
     width: auto;
+}
+#stats-pane, #game-pane {
+    border-left: 4px ridge #333;
+}
+#game-pane p, #stats-pane p {
+    padding: 40px 15px;
 }
 
 #audio-player {
