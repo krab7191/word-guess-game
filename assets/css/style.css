@@ -60,8 +60,11 @@ h1 {
 #stats-pane, #game-pane {
     border-left: 4px ridge #333;
 }
-#game-pane p, #stats-pane p {
+#game-pane p:not(.instr), #stats-pane p {
     padding: 40px 15px;
+}
+.btn-group .btn {
+    padding-top: 15px;
 }
 
 #audio-player {
@@ -72,4 +75,7 @@ h1 {
     background-color: #F0F3F4;
     color: #333;
     border-top-left-radius: 5px;
+}
+.pad-left-15 {
+    padding-left: 15px;
 }
