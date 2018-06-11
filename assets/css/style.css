@@ -40,9 +40,24 @@ h1 {
 .body-container img {
     position: absolute;
 }
+
+.body-container img:not(:first-child) {
+    display: none;
+}
+
 /* Not any document body!! The actual body body */
 
 #body {
     height: 486px;
     width: auto;
+}
+
+#audio-player {
+    box-shadow: -2px -2px 6px -2px black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #F0F3F4;
+    color: #333;
+    border-top-left-radius: 5px;
 }

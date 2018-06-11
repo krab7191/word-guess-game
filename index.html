@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -37,6 +39,16 @@
                 Three column
             </div>
         </div>
+    </div>
+
+    <div id="audio-player" class="row">
+        <audio class="col-md-12" controls autoplay loop>
+            <source src="assets/audio/tmtm.mp3" type="audio/mpeg">
+            <source src="assets/audio/tmtm.ogg" type="audio/ogg"> Your browser does not support html5 audio.
+        </audio>
+        <p class="col-md-12" id="audio-metadata">
+            Two Minutes to Midnight - Iron Maiden
+        </p>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
