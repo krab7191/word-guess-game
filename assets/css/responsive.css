@@ -1,0 +1,6 @@
+@media only screen and (max-width: 768px) {
+    /* First breakpoint where bootstrap columns fail */
+    body {
+        background: url(../images/background-768.jpg);
+    }
+}
