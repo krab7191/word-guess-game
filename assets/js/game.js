@@ -127,13 +127,13 @@ function revealBody() {
 function win() {
     wins += 1;
     $('#num-wins').html(wins);
-    alert("You win!");
+    togglePane(true);
     reset();
 }
 function lose() {
     losses += 1;
     $('#num-losses').html(losses);
-    alert("You lose");
+    togglePane(false);
     setTimeout(function() {
         reset();
     }, 3000);
@@ -160,5 +160,30 @@ function changeDiff(w) {
     var res = confirm("This will start a new game, are you sure?");
     if (res) {
         reset();
+    }
+}
+
+function togglePane(status) {
+    console.log("Toggle pane");
+    var $wl = $('#winloss');
+    if (status) {
+        // Show win pane
+        $wl.css('border-color', 'green');
+        $wl.css('color', 'green');
+        $wl.html('You win!!');
+        $wl.show("500");
+        setTimeout(function() {
+            $wl.hide("1000");
+        }, 2000);
+    }
+    else {
+        // Show lose pane
+        $wl.css('border-color', 'red');
+        $wl.css('color', 'red');
+        $wl.html("You lose!! The word was '" + word + "'");
+        $wl.show("500");
+        setTimeout(function () {
+            $wl.hide("1000");
+        }, 2000);
     }
 }
