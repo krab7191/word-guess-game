@@ -17,6 +17,7 @@ header {
     background-color: #333;
     box-shadow: 0 8px 6px -6px black;
     font-family: 'metal', Fallback, serif;
+    z-index: 10;
 }
 
 h1 {
@@ -36,7 +37,7 @@ h1 {
 }
 
 #main-content p {
-    padding-top: 10px;
+    padding-top: 5px;
     color: #111;
 }
 
@@ -49,22 +50,37 @@ h1 {
 }
 
 .body-container img:not(:first-child) {
-    display: none;
+    visibility: hidden;
 }
 
 /* Not any document body!! The actual body body */
-#body {
+
+.body-container img {
     height: 486px;
     width: auto;
 }
+
 #stats-pane, #game-pane {
     border-left: 4px ridge #333;
 }
+
 #game-pane p:not(.instr), #stats-pane p {
-    padding: 40px 15px;
+    padding: 20px 15px;
 }
+
 .btn-group .btn {
     padding-top: 15px;
+}
+
+#blanks, #guessed-letters {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#blanks {
+    font-size: 4em;
+}
+#guessed-letters {
+    font-size: 2.5em;
 }
 
 #audio-player {
@@ -76,6 +92,7 @@ h1 {
     color: #333;
     border-top-left-radius: 5px;
 }
+
 .pad-left-15 {
     padding-left: 15px;
 }
