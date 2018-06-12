@@ -135,6 +135,7 @@ function win() {
     reset();
 }
 function lose() {
+    changeAudio();
     losses += 1;
     $('#num-losses').html(losses);
     togglePane(false);
@@ -204,4 +205,15 @@ function togglePane(status) {
             $wl.hide("1000");
         }, 2000);
     }
+}
+function changeAudio() {
+    var $p = $('#player');
+    $('#ogg-source').attr('src', "assets/audio/lose.ogg");
+    $p[0].pause();
+    $p[0].load();
+    $p[0].oncanplaythrough = $p[0].play();
+    $("#audio-metadata").html("The Somatic Defilement - Whitechapel");
+    setTimeout(function() {
+        $('#ogg-source').attr('src', "assets/audio/tmtm.ogg");
+    }, 8000);
 }

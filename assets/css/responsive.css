@@ -27,6 +27,9 @@
     header {
         position: static;
     }
+    header h1 {
+        font-size: 2em;
+    }
     #main-content {
         margin-top: 5px;
     }
@@ -63,7 +66,7 @@
 @media only screen and (max-width: 554px) {
     /* Header overflows */
     header h1 {
-        font-size: 2em;
+        font-size: 1.7em;
     }
     #main-content {
         margin-bottom: 55px;
@@ -96,6 +99,9 @@
 }
 
 @media only screen and (max-width: 476px) {
+    header h1 {
+        font-size: 1.5em;
+    }
     #audio-player p {
         font-size: .6em;
     }
@@ -106,7 +112,7 @@
 
 @media only screen and (max-width: 446px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .body-container {
         width: 50%;
@@ -116,6 +122,12 @@
     }
     .btn-group {
         width: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    header h1 {
+        font-size: 1.2em;
     }
 }
 
