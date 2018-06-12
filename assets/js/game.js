@@ -154,12 +154,26 @@ $('#hard').click(function (event) {
 
 function changeDiff(w) {
     diff = w;
+    var g = $('#blanks').html();
     $(".btn").removeClass('btn-dark');
     $(".btn").addClass('btn-secondary');
     $("#" + w).addClass('btn-dark');
-    var res = confirm("This will start a new game, are you sure?");
-    if (res) {
+    if (g.indexOf('?') != -1) {
         reset();
+    }
+    else {
+        for (var i = 0; i < g.length; i++) {
+            if (g[i] !== '_' && g[i] !== ' ') {
+                var res = confirm("This will start a new game, are you sure?");
+                if (res) {
+                    reset();
+                }
+                i = g.length;
+            }
+            if (i == g.length-1) {
+                reset();
+            }
+        }
     }
 }
 

@@ -98,4 +98,5 @@ img:not(:first-child) {
     border-radius: 5px;
     padding: 30px;
     font-size: 3em;
+    z-index: 20;
 }
