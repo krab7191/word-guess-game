@@ -33,6 +33,9 @@
     #main-content p {
         padding-top: 0;
     }
+    #stats-pane, #game-pane {
+        border: none;
+    }
     .body-container {
         width: 30%;
         margin: 0 auto;
@@ -115,6 +118,7 @@
         width: 50%;
     }
 }
+
 @media only screen and (max-width: 380px) {
     #audio-player p {
         font-size: .5em;
