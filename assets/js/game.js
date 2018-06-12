@@ -16,6 +16,9 @@ $(document).ready(function () {
             run(event.key);    // Second and following keypresses loop through game logic
         }
     });
+    $(document).on("touchend", function (event) {
+        alert("Not yet ready for touch events...");
+    });
 });
 
 function run(key) {
