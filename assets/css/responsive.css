@@ -56,3 +56,71 @@
         width: 30%;
     }
 }
+
+@media only screen and (max-width: 554px) {
+    /* Header overflows */
+    header h1 {
+        font-size: 2em;
+    }
+    #main-content {
+        margin-bottom: 55px;
+    }
+    .btn-group {
+        width: 35%;
+    }
+    .body-container {
+        width: 40%;
+    }
+    #audio-player {
+        left: 0;
+        height: 50px;
+        border-radius: 0;
+    }
+    #audio-player audio {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 50px;
+    }
+    #audio-player p {
+        font-size: .7em;
+        position: fixed;
+        width: 45%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    #audio-player p {
+        font-size: .6em;
+    }
+    .btn-group {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 446px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .body-container {
+        width: 50%;
+    }
+    #audio-player p {
+        font-size: .5em;
+    }
+    .btn-group {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    #audio-player p {
+        font-size: .5em;
+        width: 33%;
+    }
+    .body-container {
+        width: 60%;
+    }
+}

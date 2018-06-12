@@ -49,7 +49,7 @@ h1 {
 }
 
 img:not(:first-child) {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 #stats-pane, #game-pane {
