@@ -215,5 +215,9 @@ function changeAudio() {
     $("#audio-metadata").html("The Somatic Defilement - Whitechapel");
     setTimeout(function() {
         $('#ogg-source').attr('src', "assets/audio/tmtm.ogg");
+        $p[0].pause();
+        $p[0].load();
+        $p[0].oncanplaythrough = $p[0].play();
+        $("#audio-metadata").html("Two Minutes to Midnight - Iron Maiden");
     }, 8000);
 }
