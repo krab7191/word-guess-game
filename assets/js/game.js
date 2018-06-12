@@ -111,8 +111,8 @@ function updateGuessed(char) {
 function reset() {
     guesses = 0;
     isRunning = false;
-    $('#blanks').html("");
-    $('#guessed-letters').html("");
+    $('#blanks').html("?");
+    $('#guessed-letters').html("?");
     guessed = [];
     $('.body-container img').css('visibility', 'hidden');
     $('.body-container img:first-child').css('visibility', 'visible');

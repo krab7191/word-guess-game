@@ -26,48 +26,43 @@ h1 {
 }
 
 #main-content {
+    position: relative;
     /* To push below fixed header */
     margin-top: 100px;
-    width: 80%;
+    width: 95%;
     max-width: 960px;
     border: 8px ridge #333;
     font-family: 'metal', Fallback, serif;
     font-size: .9em;
+    max-height: 600px;
 }
 
 #main-content p {
     padding-top: 5px;
     color: #111;
 }
-.body-container {
-    height: 100%;
-}
 
 .body-container img {
     position: absolute;
+    height: 100%;
+    width: auto;
 }
 
-.body-container img:not(:first-child) {
+img:not(:first-child) {
     visibility: hidden;
-}
-
-/* Not any document body!! The actual body body */
-
-.body-container img {
-    /* height: 486px; */
-    /* width: auto; */
 }
 
 #stats-pane, #game-pane {
     border-left: 4px ridge #333;
 }
 
-#game-pane p:not(.instr), #stats-pane p {
-    padding: 20px 15px;
+#game-pane p, #stats-pane p {
+    padding: 15px;
 }
 
 .btn-group .btn {
     padding-top: 15px;
+    font-size: .9em;
 }
 
 #blanks, #guessed-letters {
@@ -90,10 +85,6 @@ h1 {
     background-color: #F0F3F4;
     color: #333;
     border-top-left-radius: 5px;
-}
-
-.pad-left-15 {
-    padding-left: 15px;
 }
 
 #winloss {
