@@ -1,6 +1,58 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 940px) {
+    /* Text starts flowing to next line */
+    .btn, .instr {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* Text starts flowing to next line */
+    .btn {
+        font-size: .7em;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    /* Text starts flowing to next line */
+    .btn, .instr {
+        font-size: .69em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     /* First breakpoint where bootstrap columns fail */
     body {
         background: url(../images/background-768.jpg);
+    }
+    header {
+        position: static;
+    }
+    #main-content {
+        margin-top: 5px;
+    }
+    #main-content p {
+        padding-top: 0;
+    }
+    .body-container {
+        width: 30%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .body-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+    #game-pane {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 400px;
+    }
+    .btn-group {
+        width: 30%;
     }
 }
