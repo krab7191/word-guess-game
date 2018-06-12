@@ -34,7 +34,7 @@ h1 {
     border: 8px ridge #333;
     font-family: 'metal', Fallback, serif;
     font-size: .9em;
-    max-height: 600px;
+    min-height: 400px;
 }
 
 #main-content p {
