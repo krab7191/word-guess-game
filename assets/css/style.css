@@ -59,6 +59,9 @@ img:not(:first-child) {
 #game-pane p, #stats-pane p {
     padding: 15px;
 }
+#correct-words p {
+    padding: 0;
+}
 
 .btn-group .btn {
     padding-top: 15px;
