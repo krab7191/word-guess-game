@@ -62,7 +62,9 @@ img:not(:first-child) {
 #correct-words p {
     padding: 0;
 }
-
+.btn-group {
+    margin-top: -15px;
+}
 .btn-group .btn {
     padding-top: 15px;
     font-size: .9em;

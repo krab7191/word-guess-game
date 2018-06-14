@@ -42,6 +42,10 @@ var hangman = {
             return true;
         }
     },
+    updateScreenBlanks: function(char, index) {
+        var curr = $('#blanks')[0].innerHTML;
+        
+    },
 
 
 

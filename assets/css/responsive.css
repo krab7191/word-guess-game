@@ -31,7 +31,7 @@
         font-size: 2em;
     }
     #main-content {
-        margin-top: 5px;
+        margin: 5px 0 55px 0;
     }
     #main-content p {
         padding-top: 0;
@@ -58,24 +58,11 @@
         left: 0;
         margin-top: 400px;
     }
+    #stats-pane {
+        margin-top: 10px;
+    }
     .btn-group {
         width: 30%;
-    }
-}
-
-@media only screen and (max-width: 554px) {
-    /* Header overflows */
-    header h1 {
-        font-size: 1.7em;
-    }
-    #main-content {
-        margin-bottom: 55px;
-    }
-    .btn-group {
-        width: 35%;
-    }
-    .body-container {
-        width: 40%;
     }
     #audio-player {
         left: 0;
@@ -95,6 +82,19 @@
         width: 45%;
         right: 0;
         bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 554px) {
+    /* Header overflows */
+    header h1 {
+        font-size: 1.7em;
+    }
+    .btn-group {
+        width: 35%;
+    }
+    .body-container {
+        width: 40%;
     }
 }
 
