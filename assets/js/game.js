@@ -208,7 +208,7 @@ function togglePane(status) {
 }
 function changeAudio() {
     var $p = $('#player');
-    $('#ogg-source').attr('src', "assets/audio/lose.ogg");
+    $('#ogg-source').attr('src', "assets/audio/lose-short.ogg");
     $p[0].pause();
     $p[0].load();
     $p[0].oncanplaythrough = $p[0].play();
