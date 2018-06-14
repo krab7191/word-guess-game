@@ -219,5 +219,5 @@ function changeAudio() {
         $p[0].load();
         $p[0].oncanplaythrough = $p[0].play();
         $("#audio-metadata").html("Two Minutes to Midnight - Iron Maiden");
-    }, 8000);
+    }, 2000);
 }
