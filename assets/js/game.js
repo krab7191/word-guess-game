@@ -4,7 +4,7 @@ var mediumList = ["metals", "thrash", "grunge", "hammer", "brass", "hammered", "
 var hardList = ["metalhead", "grindcore", "headbanger", "saturation", "hammering", "metallica", "baseplate", "boilermaker", "blackjack", "bulldozer", "metalocalypse", "distortion", "acetabulum", "quicksilver", "sledgehammer", "cuprimine", "ferrocene", "blastbeat", "doublekicker"];
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var guessed = [];
-var guesses = 0;
+var guesses = 0; 
 
 $(document).ready(function () {
     $(document).on("keyup", function (event) {
