@@ -132,7 +132,7 @@ function revealBody() {
 function win() {
     wins += 1;
     $('#num-wins').html(wins);
-    $("#correct-words").append("<p>"+word+"</p>");
+    $("#correct-words").prepend("<p>"+word+"</p>");
     togglePane(true);
     reset();
 }
