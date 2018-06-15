@@ -8,6 +8,7 @@ var guesses = 0;
 
 $(document).ready(function () {
     $('#instruction-tooltip').tooltip();
+    $("#button-group").tooltip();
     $(document).on("keyup", function (event) {
         if (!isRunning) {      // First keypress populates play area
             getWord();
@@ -165,6 +166,11 @@ function changeDiff(w) {
     $(".btn").addClass('btn-secondary');
     $("#" + w).addClass('btn-dark');
     if (g.indexOf('?') != -1) {
+        // New game tooltip here
+        $('#button-group').tooltip('show');
+        setTimeout(function() {
+            $('#button-group').tooltip('hide');
+        }, 3000);
         reset();
     }
     else {
@@ -172,11 +178,21 @@ function changeDiff(w) {
             if (g[i] !== '_' && g[i] !== ' ') {
                 var res = confirm("This will start a new game, are you sure?");
                 if (res) {
+                    // New game tooltip here
+                    $('#button-group').tooltip('show');
+                    setTimeout(function () {
+                        $('#button-group').tooltip('hide');
+                    }, 3000);
                     reset();
                 }
                 i = g.length;
             }
             if (i == g.length-1) {
+                // New game tooltip here
+                $('#button-group').tooltip('show');
+                setTimeout(function () {
+                    $('#button-group').tooltip('hide');
+                }, 3000);
                 reset();
             }
         }
