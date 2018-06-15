@@ -51,7 +51,6 @@ h1 {
 img:not(:first-child) {
     visibility: hidden;
 }
-
 #stats-pane, #game-pane {
     border-left: 4px ridge #333;
 }

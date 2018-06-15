@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome.css"> Doesn't work with current local file structure... -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Hangman</title>
@@ -37,6 +39,10 @@
                 <div class="row text-center">
                     <p class="col-md-12 instr">
                         Press any key to start
+                        <!-- glyphicons are not supported in Bootstrap 4... Using fontawesome -->
+                        <i id="instruction-tooltip" class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Hit any key to generate a random word, then use the keyboard to guess letters. <br><br> Guessing wrong will cause a body part to show on the man. Once all 6 are showing, you lose! <br><br> After a win or a loss the game automatically restarts. Changing the difficulty will also start a new game."
+                            container: 'body' data-html="true">
+                        </i>
                     </p>
                     <p class="col-md-12" id="blanks">
                         ?
@@ -87,7 +93,7 @@
         <audio id="player" class="col-md-12" controls autoplay loop>
             <source id="ogg-source" src="assets/audio/tmtm.ogg" type="audio/ogg">
             <!-- <source src="assets/audio/tmtm.mp3" type="audio/mpeg"> -->
-                Your browser does not support html5 audio.
+            Your browser does not support html5 audio.
         </audio>
         <p class="col-md-12 text-right" id="audio-metadata">
             Two Minutes to Midnight - Iron Maiden
@@ -96,9 +102,14 @@
     <div id="winloss">
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <!-- Commented CDNs for local development because my wifi crashed :( -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script> -->
     <script src="assets/js/jquery.slim.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script> -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
     <script src="assets/js/game.js"></script>
 </body>

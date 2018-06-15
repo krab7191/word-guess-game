@@ -7,6 +7,7 @@ var guessed = [];
 var guesses = 0;
 
 $(document).ready(function () {
+    $('#instruction-tooltip').tooltip();
     $(document).on("keyup", function (event) {
         if (!isRunning) {      // First keypress populates play area
             getWord();
