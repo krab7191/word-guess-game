@@ -9,6 +9,7 @@ var guesses = 0;
 $(document).ready(function () {
     $('#instruction-tooltip').tooltip();
     $("#button-group").tooltip();
+    $("#player")[0].play();        // Force audio to play (Some browsers don't repect the audio tag's autoplay it seems)
     $(document).on("keyup", function (event) {
         if (!isRunning) {      // First keypress populates play area
             getWord();
