@@ -44,7 +44,14 @@ var hangman = {
     },
     updateScreenBlanks: function(char, index) {
         var curr = $('#blanks')[0].innerHTML;
-        
+        if (index === 0) {
+            curr = char + curr.slice(1, curr.length - 1);
+            $('#blanks').html(curr);
+        }
+        else {
+            curr = curr.slice(0, index*2) + char + curr.slice(index*2 + 1, curr.length);
+            $('#blanks').html(curr);
+        }
     },
 
 
