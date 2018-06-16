@@ -30,7 +30,7 @@ function run(key) {
     if (alphabet.indexOf(k) != -1) {   // Pressed key is a letter; do other game logic
         for (var i = 0; i < word.length; i++) {  // Check if the letter is in the word
             if (word.charAt(i) == k) {                           // It is!
-                if ($('#blanks').html().charAt(i*2) == k) {      // Has it already been put on screen?
+                if ($('#blanks').html().charAt(i * 2) == k) {      // Has it already been put on screen?
                     return;
                 }
                 else {
@@ -44,7 +44,7 @@ function run(key) {
                     }
                 }
             }
-            else if (i == word.length-1 && word.indexOf(k) == -1) {      // reached end of array with no match...
+            else if (i == word.length - 1 && word.indexOf(k) == -1) {      // reached end of array with no match...
                 updateGuessed(k);                // Update guessed letters
                 if (checkLose()) {               // Check for game over
                     lose();
@@ -141,18 +141,19 @@ function revealBody() {
 }
 
 function win() {
+    changeAudio('win');
     wins += 1;
     $('#num-wins').html(wins);
-    $("#correct-words").prepend("<p>"+word+"</p>");
+    $("#correct-words").prepend("<p>" + word + "</p>");
     togglePane(true);
     reset();
 }
 function lose() {
-    changeAudio();
+    changeAudio('lose');
     losses += 1;
     $('#num-losses').html(losses);
     togglePane(false);
-    setTimeout(function() {
+    setTimeout(function () {
         reset();
     }, 3000);
 
@@ -179,7 +180,7 @@ function changeDiff(w) {
     if (g.indexOf('?') != -1) {
         // New game tooltip here
         $('#button-group').tooltip('show');
-        setTimeout(function() {
+        setTimeout(function () {
             $('#button-group').tooltip('hide');
         }, 3000);
         reset();
@@ -198,7 +199,7 @@ function changeDiff(w) {
                 }
                 i = g.length;
             }
-            if (i == g.length-1) {
+            if (i == g.length - 1) {
                 // New game tooltip here
                 $('#button-group').tooltip('show');
                 setTimeout(function () {
@@ -218,7 +219,7 @@ function togglePane(status) {
         $wl.css('color', 'green');
         $wl.html('You win!!');
         $wl.show("500");
-        setTimeout(function() {
+        setTimeout(function () {
             $wl.hide("1000");
         }, 2000);
     }
@@ -233,20 +234,24 @@ function togglePane(status) {
         }, 2000);
     }
 }
-function changeAudio() {
-    var $p = $('#player');
-    $('#ogg-source').attr('src', "assets/audio/lose-short.ogg");
-    $p[0].pause();
-    $p[0].load();
-    $p[0].oncanplaythrough = $p[0].play();
-    $("#audio-metadata").html("The Somatic Defilement - Whitechapel");
-    setTimeout(function() {
-        $('#ogg-source').attr('src', "assets/audio/tmtm.ogg");
-        $p[0].pause();
-        $p[0].load();
-        $p[0].oncanplaythrough = $p[0].play();
-        $("#audio-metadata").html("Two Minutes to Midnight - Iron Maiden");
-    }, 2000);
+function changeAudio(state) {
+    var $p = $('#player')[0];
+    $p.pause();
+    if (state === "win") {
+        var win = document.createElement("audio");
+        win.setAttribute("src", "assets/audio/win.ogg");
+        win.play();
+        setTimeout(function () {
+            $p.play();
+        }, 3000);
+    } else {
+        var lose = document.createElement("audio");
+        lose.setAttribute("src", "assets/audio/lose-short.ogg");
+        lose.play();
+        setTimeout(function () {
+            $p.play();
+        }, 3000);
+    }
 }
 
 function removeFromArray(array, word) {
