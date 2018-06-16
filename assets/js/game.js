@@ -62,6 +62,7 @@ function getWord() {
     } else {
         word = hardList[Math.floor(Math.random() * hardList.length)];
     }
+    removeFromArray(diff, word);
 }
 function createBlanks() {
     // Change font size based on difficulty (word length)
@@ -200,7 +201,6 @@ function changeDiff(w) {
 }
 
 function togglePane(status) {
-    console.log("Toggle pane");
     var $wl = $('#winloss');
     if (status) {
         // Show win pane
@@ -237,4 +237,14 @@ function changeAudio() {
         $p[0].oncanplaythrough = $p[0].play();
         $("#audio-metadata").html("Two Minutes to Midnight - Iron Maiden");
     }, 2000);
+}
+
+function removeFromArray(array, word) {
+    if (array === 'easy') {
+        easyList.splice(easyList.indexOf(word), 1);
+    } else if (array === "medium") {
+        mediumList.splice(mediumList.indexOf(word), 1);
+    } else {
+        hardList.splice(hardList.indexOf(word), 1);
+    }
 }
