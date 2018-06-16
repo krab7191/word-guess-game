@@ -56,10 +56,19 @@ function run(key) {
 
 function getWord() {
     if (diff === 'easy') {
+        if (easyList.length == 0) {
+            alert("No more words!!!");
+        }
         word = easyList[Math.floor(Math.random() * easyList.length)];
     } else if (diff === 'medium') {
+        if (mediumList.length == 0) {
+            alert("No more words!!!");
+        }
         word = mediumList[Math.floor(Math.random() * mediumList.length)];
     } else {
+        if (hardList.length == 0) {
+            alert("No more words!!!");
+        }
         word = hardList[Math.floor(Math.random() * hardList.length)];
     }
     removeFromArray(diff, word);
