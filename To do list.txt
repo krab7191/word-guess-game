@@ -1,6 +1,6 @@
 [] Use localStorage for persistent gaming
-[] Win sound
+[X] Win sound
 [] Mobile support using ontouchup
 [X] Make audio play on load
-[] Refine / expand word lists
+[X] Refine / expand word lists
 [] Toggle for touch / non-touch devices
